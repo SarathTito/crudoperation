@@ -1,0 +1,13 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="slno">slno:</label>
+    <input type="text" name="slno"  value="{{ contact.slno }}" required><br><br>
+    
+    <label for="itemname">itemname:</label>
+    <input type="text" name="itemname" value="{{ contact.itemname }}" required><br><br>
+    
+    <label for="description">description:</label>
+    <textarea name="description"  rows="4" required>{{ contact.description }}</textarea><br><br>
+    
+    <input type="submit" value="Update">
+  </form>
